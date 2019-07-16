@@ -5,19 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Giftastic</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/cs/style.css">
 </head>
 <body>
-    <div id="container">
+    <div id="container" class="container">
+        <form>
+            <span id="animalItem">Enter an Animal: <input id="animal" type="text" ><input id="addAnimal" value="Add Animal" type="submit"></span>
+        </form>
         <div id="header">
             <div id="animalButtons"></div>
         </div>
-        <div id="body">
-            
+        <div id="gifGrid" class="row">
+
         </div>
     </div>
     
     
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
