@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    console.log("JS loaded.");
     var animalArray = ["Bird", "Cat", "Dog", "Ferret", ];
     function updateList()
     {
@@ -11,7 +10,6 @@ $(document).ready(function(){
     }
     $("#addAnimal").on("click", function(event) {
         event.preventDefault();
-        console.log($("#animal").val());
         animalArray.push($("#animal").val());
         updateList();
     });
@@ -25,7 +23,6 @@ $(document).ready(function(){
             url : queryURL,
             method : 'GET',
         }).then(function(response){
-            console.log(response);
             var results = response.data;
             for(var i = 0; i < results.length; i++)
             {
@@ -37,7 +34,6 @@ $(document).ready(function(){
     });
     $(document).on("click", ".gif", function(){
         var state = $(this).attr("data-state");
-        console.log(state);
         if(state === "still")
         {
             $(this).attr("src", $(this).attr("data-animated"));
