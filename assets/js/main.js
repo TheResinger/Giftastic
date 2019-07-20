@@ -1,23 +1,23 @@
 $(document).ready(function(){
-    var animalArray = ["Bird", "Cat", "Dog", "Ferret", ];
+    var termArray = ["Bird", "Car", "Laughing", "Tablet", ];
     function updateList()
     {
-        $("#animalButtons").empty();
-        for(var i = 0; i < animalArray.length; i++)
+        $("#termButtons").empty();
+        for(var i = 0; i < termArray.length; i++)
         {
-            $("#animalButtons").append($("<button>",{"type":"button","id":animalArray[i],"text":animalArray[i],"class":"animalButton"}));
+            $("#termButtons").append($("<button>",{"type":"button","id":termArray[i],"text":termArray[i],"class":"termButton"}));
         }
     }
-    $("#addAnimal").on("click", function(event) {
+    $("#addTerm").on("click", function(event) {
         event.preventDefault();
-        animalArray.push($("#animal").val());
+        termArray.push($("#term").val());
         updateList();
     });
    
-    $(document).on("click",".animalButton", function(){
+    $(document).on("click",".termButton", function(){
         console.log($(this).attr("id"));
-        var queryAnimal = $(this).attr("id");
-        var queryURL =  "https://api.giphy.com/v1/gifs/search?q=" + queryAnimal + "&api_key=2II6IkwKhCCu8L1lvmmQUB53I3TFGZpI&limit=50"
+        var queryterm = $(this).attr("id");
+        var queryURL =  "https://api.giphy.com/v1/gifs/search?q=" + queryterm + "&api_key=2II6IkwKhCCu8L1lvmmQUB53I3TFGZpI&limit=50"
         $("#gifGrid").empty();
         $.ajax({
             url : queryURL,
@@ -26,9 +26,10 @@ $(document).ready(function(){
             var results = response.data;
             for(var i = 0; i < results.length; i++)
             {
-                $("#gifGrid").prepend($("<div>",{"class" : "col-md-4","id" : queryAnimal + i}));
-                $("#" + queryAnimal + i).append($("<p>",{"text":"Rating : "+ results[i].rating}));
-                $("#" + queryAnimal + i).append($("<img>",{"src": results[i].images.fixed_height_still.url,"data-still":results[i].images.fixed_height_still.url,"data-animated": results[i].images.fixed_height.url,"data-state": "still","class" : "gif"}));
+                var rating = results[i].rating;
+                $("#gifGrid").prepend($("<div>",{"class" : "col-md-4 gif","id" : queryterm + i}));
+                $("#" + queryterm + i).append($("<img>",{"src": results[i].images.fixed_height_still.url,"data-still":results[i].images.fixed_height_still.url,"data-animated": results[i].images.fixed_height.url,"data-state": "still","class" : "gif"}));
+                $("#" + queryterm + i).append($("<p>",{"text":"Rating : "+ rating.toUpperCase(),"align":"center","id" : "rating"}));
             }
         });
     });

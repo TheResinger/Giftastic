@@ -9,19 +9,19 @@
     <link rel="stylesheet" href="assets/cs/style.css">
 </head>
 <body>
-    <div id="container" class="container">
-        <form>
-            <span id="animalItem">Enter an Animal: <input id="animal" type="text" ><input id="addAnimal" value="Add Animal" type="submit"></span>
-        </form>
+    <div id="Header" class="jumbotron container">
         <div id="header">
-            <div id="animalButtons"></div>
+            <div id="termButtons" align="center"></div>
         </div>
-        <div id="gifGrid" class="row">
-
-        </div>
+        <form id="searchTerm" align="center">
+            <span>Enter an Object to Search For: </span>
+            <input id="term" type="text" ><input id="addTerm" value="Add Object" type="submit">
+        </form>
+        
     </div>
-    
-    
+    <div class="container" id="gifResults">
+        <div id="gifGrid" class="row"></div>
+    </div>  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
