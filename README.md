@@ -21,11 +21,6 @@ SSH:
 $ git clone git@github.com:TheResinger/Giftastic.git
 ```
 
-Next, cd into the repository and run the command
-```
-npm install
-```
-
 ### Built With
 
 * [Bootstrap](https://getbootstrap.com/) - CSS Template
