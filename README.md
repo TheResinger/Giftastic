@@ -39,4 +39,4 @@ npm install
 
 ### Authors
 
-See the list of [contributors](https://github.com/TheResinger/TypingSpeedTest/graphs/contributors) who participated in this project along with individual commit history. 
+See the list of [contributors](https://github.com/TheResinger/Giftastic/graphs/contributors) who participated in this project along with individual commit history. 
