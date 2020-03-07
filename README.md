@@ -1,19 +1,42 @@
-# Giftastic
+# Giftasti 
 
-## TODO
+### Overview
 
+A web application utilizing the giphy api to search for gifs the user specifies.
 
+## Getting Started
 
-## Technologies Used
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. They will also give an overview of some of the app's functionality. 
 
-1. HTML
-2. CSS
-3. JavaScript
-4. jQuery
-5. Bootstrap
+### Installing
 
+Git clone the repository to your local machine:
 
-## Application Use
+HTTPS: 
+```
+$ git clone https://github.com/TheResinger/Giftastic.git
+```
+SSH:
+```
+$ git clone git@github.com:TheResinger/Giftastic.git
+```
 
-1. Enter a word you would like to search for on the giphy website.
-2. Display gifs to the dom.
+Next, cd into the repository and run the command
+```
+npm install
+```
+
+### Built With
+
+* [Bootstrap](https://handlebarsjs.com/) - Javascript Templating Engine
+* [jQuery](https://jquery.com/) - Javascript Libray
+
+### Future Development
+
+### Deployment
+
+[Here is the link for the deployment of this app.](https://theresinger.github.io/Giftastic/)
+
+### Authors
+
+See the list of [contributors](https://github.com/TheResinger/TypingSpeedTest/graphs/contributors) who participated in this project along with individual commit history. 
